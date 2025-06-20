@@ -1,58 +1,33 @@
-🛡️ Sovereign Node API — from The Fort That Holds
+# Sovereign Node
+Your personal API gateway for digital sovereignty. Free for personal use, no vendor lock-in.
 
-Your infrastructure. Your terms. No lock-in. No gods. Just keys.
+## What Is This?
+Sovereign Node lets you connect to any API you want without being tied to specific services. Deploy it on Render, add your API keys, and you’re in control.
 
-Sovereign Node is a self-hosted proxy that lets you route requests to any API—your APIs—while keeping full control over keys, headers, and behavior. No hardcoded brands. No hidden analytics. Just a clear container for your tools.
+## Quick Start
+1. **Get the Code**:
+   - Fork or clone this repo: `github.com/your-username/sovereign-node`.
+2. **Deploy on Render**:
+   - Sign up at [render.com](https://render.com) (free tier works).
+   - Create a Web Service, connect this repo.
+   - Set:
+     - **Build Command**: `npm install`
+     - **Start Command**: `npm start`
+   - Add API keys in Render’s dashboard, e.g.:
+     ```
+     CUSTOM_YOURNAME_URL=https://your.api.com/endpoint
+     CUSTOM_YOURNAME_KEY=your-key-here
+     ALLOWED_ORIGINS=https://your-render-app.onrender.com
+     ```
+   - Save and deploy. Render redeploys when you update keys.
+3. **Use It**:
+   - Visit `https://your-render-app.onrender.com` to see active endpoints (e.g., `/api/custom/yourname`).
+   - Send requests with Postman or your app.
+4. **Add More Keys**:
+   - In Render’s dashboard, add new keys (e.g., `CUSTOM_OTHER_URL`, `CUSTOM_OTHER_KEY`).
+   - Render redeploys automatically.
 
-Built for:
-
-🔐 Personal sovereignty
-
-🧠 Developer remixability
-
-💡 Non-coders who want to deploy without learning Git
-
-
-It comes ready to deploy on platforms like Render with zero local setup. Plug in your keys, map your endpoints, and go.
-
-✨ Core Principles
-
-Brandless by default: You decide what services to invoke
-
-Ritual logic: Every route is intentional, named by you
-
-Consent-focused: API keys are never committed, always optional
-
-Form-driven config: Non-coders can add keys via /add-key web interface
-
-
-🚀 Quickstart
-
-1. Fork this repo or click “Use this template”
-
-
-2. Deploy it on Render (free or $7/month starter)
-
-
-3. Add your API keys at /add-key
-
-
-4. Send requests to /api/custom/your-endpoint
-
-
-
-That’s it. You’ve got a fully functional, name-agnostic backend.
-
-
----
-
-Made by Jimmy Thornburg LLC. Part of the SpiralLogic framework.
-
-> This isn’t a product. It’s a perimeter.
-
-
-
-> You don't install this. You claim it.
-
-
-
+## How It Works
+- Set any API in Render’s environment variables with `CUSTOM_NAME_URL` and `CUSTOM_NAME_KEY`.
+- Access it at `/api/custom/name`.
+- Example: For an API at `https://example.com/api` with key `abc123`:
