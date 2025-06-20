@@ -1,17 +1,17 @@
 {
-  "name": "personal-api-proxy-node",
+  "name": "sovereign-node",
   "version": "1.0.0",
-  "description": "Personal API Proxy Node - Your Digital Sovereignty Infrastructure",
+  "description": "Sovereign Node - Your Digital Sovereignty Gateway for Any API",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
   "keywords": [
-    "api-proxy",
     "digital-sovereignty",
+    "api-gateway",
     "personal-infrastructure",
-    "ai-gateway"
+    "sovereign-node"
   ],
   "author": "Digital Sovereignty Project",
   "license": "MIT",
